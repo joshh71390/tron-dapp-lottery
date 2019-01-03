@@ -2,10 +2,8 @@
   "name": "tron-dapp-lottery",
   "version": "0.1.0",
   "scripts": {
-    "start": "",
-    "build": "",
-    "test": "",
-    "eject": ""
+    "start": "node app.js",
+    "build": "webpack"
   },
   "browserslist": [
     ">0.2%",

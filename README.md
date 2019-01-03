@@ -5,5 +5,6 @@ This is a tron prize dapp
 How to Use.
 
 1.yarn 
-1.yarn start
+
+2.yarn start
 
