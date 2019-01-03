@@ -1,10 +1,10 @@
-## tron-dapp-prize
+## tron-dapp-lottery
 
-This is a tron prize dapp
+This is a tron dapp lottery
 
 How to Use.
 
-1.yarn 
+1.npm run build 
 
 2.yarn start
 
