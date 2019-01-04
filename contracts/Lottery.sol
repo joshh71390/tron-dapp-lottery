@@ -2,7 +2,7 @@ pragma solidity ^0.4.8;
 
 contract Lottery {
     
-    uint nonce = 1000;
+    
     enum LotteryState { Accepting, Finished }
     LotteryState state; 
     address owner;
@@ -10,9 +10,9 @@ contract Lottery {
         owner = msg.sender;
         state = LotteryState.Accepting;
     }
-    function random() public returns (uint){
-        nonce += 1;
-        return uint(keccak256(abi.encodePacked(nonce)));
+
+    function random() private view returns (uint8) {
+        return uint8(uint256(keccak256(block.timestamp, block.difficulty))%8);
     }
 
     function deterWinner() public returns (uint) {
