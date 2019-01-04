@@ -17,16 +17,20 @@
     "tronweb": "^2.0.30"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-register": "^6.26.0",
-    "move-cli": "^1.2.0",
-    "rimraf": "^2.6.2",
-    "solc": "^0.4.25",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "move-cli": "^1.2.0",
+    "rimraf": "^2.6.2",
+    "solc": "^0.4.25",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
   }
 }

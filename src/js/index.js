@@ -1,5 +1,11 @@
 
-var Tron = require('./tron')
+const contractAddress = 'TQasFxgp6JgbHXuUUZzK1cuownzKgkCvno'
+
+const contract = tronWeb.contract().at(contractAddress)
+
+function  getWinner(){
+    contract.deterWinner()
+}
 
 var turnWheel = {
     rewardNames:[],				//转盘奖品名称数组
@@ -51,7 +57,7 @@ $('.pointer').click(function (){
     if(turnWheel.bRotate) return;
     turnWheel.bRotate = !turnWheel.bRotate;
     var count = turnWheel.rewardNames.length;
-    var item = Tron.getLottery()
+    var item = getWinner();
     // 开始抽奖
     rotateFunc(item, turnWheel.rewardNames[item],count);
 });
