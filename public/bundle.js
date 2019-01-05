@@ -93,13 +93,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-const contractAddress = 'TQasFxgp6JgbHXuUUZzK1cuownzKgkCvno';
+const contractAddress = 'TW5MT7X5e1qsjB8SuUcN3U6YbvJhR2XjX7';
 const contract = tronWeb.contract().at(contractAddress);
-
-function getWinner() {
-  contract.deterWinner();
-}
-
 var turnWheel = {
   rewardNames: [],
   //转盘奖品名称数组
@@ -150,7 +145,7 @@ $('.pointer').click(function () {
   if (turnWheel.bRotate) return;
   turnWheel.bRotate = !turnWheel.bRotate;
   var count = turnWheel.rewardNames.length;
-  var item = getWinner(); // 开始抽奖
+  var item = contract.deterWinner(); // 开始抽奖
 
   rotateFunc(item, turnWheel.rewardNames[item], count);
 });
