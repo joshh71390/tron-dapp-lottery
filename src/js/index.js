@@ -1,7 +1,16 @@
+let contract;
 
-const contractAddress = 'TJ8AgHf52KAioNPpWueNYLWz3dGsVDmS83'
+async function init(){
+    let contractAddress = 'TJc8cqvE7FqxVfdhLNvR16tYki432hVST9';   //Your address
+    contract = await tronWeb.contract().at(contractAddress);
+}
 
-const contract = tronWeb.contract().at(contractAddress)
+async function getWinner(){
+    let result = await contract.deterWinner().call();
+    return result;
+}
+
+init();
 
 var turnWheel = {
     rewardNames:[],				//转盘奖品名称数组
@@ -48,12 +57,12 @@ var rotateFunc = function (item, tip,count){
 };
 
 // 抽取按钮按钮点击触发事件
-$('.pointer').click(function (){
+$('.pointer').click( function (){
     // 正在转动，直接返回
     if(turnWheel.bRotate) return;
     turnWheel.bRotate = !turnWheel.bRotate;
     var count = turnWheel.rewardNames.length;
-    var item = contract.deterWinner()
+    var item = getWinner()
     // 开始抽奖
     rotateFunc(item, turnWheel.rewardNames[item],count);
 });
