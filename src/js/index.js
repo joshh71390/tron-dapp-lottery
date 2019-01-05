@@ -1,5 +1,5 @@
 
-const contractAddress = 'TW5MT7X5e1qsjB8SuUcN3U6YbvJhR2XjX7'
+const contractAddress = 'TJ8AgHf52KAioNPpWueNYLWz3dGsVDmS83'
 
 const contract = tronWeb.contract().at(contractAddress)
 

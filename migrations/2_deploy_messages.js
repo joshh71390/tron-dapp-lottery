@@ -1,5 +1,5 @@
-var PrizeGrant = artifacts.require("./PrizeGrant.sol");
+var Lottery = artifacts.require("./Lottery.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(PrizeGrant);
+  deployer.deploy(Lottery);
 };

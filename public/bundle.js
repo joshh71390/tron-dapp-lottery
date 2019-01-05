@@ -95,6 +95,7 @@
 
 const contractAddress = 'TW5MT7X5e1qsjB8SuUcN3U6YbvJhR2XjX7';
 const contract = tronWeb.contract().at(contractAddress);
+console.log(contract);
 var turnWheel = {
   rewardNames: [],
   //转盘奖品名称数组
